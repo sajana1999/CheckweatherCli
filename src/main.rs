@@ -1,8 +1,6 @@
 use clap::Parser;
 use reqwest::blocking::Client;
 use serde::Deserialize;
-use std::env;
-use dotenv::dotenv;  // Import dotenv
 
 #[derive(Parser)]
 #[command(author, version, about, long_about = None)]
@@ -30,17 +28,10 @@ struct MainInfo {
 }
 
 fn main() {
-    dotenv().ok(); // Load the environment variables from `.env` file
-
     let args = Cli::parse();
-
-    let api_key = match env::var("OPENWEATHER_API_KEY") {
-        Ok(val) => val,
-        Err(_) => {
-            eprintln!("Error: OPENWEATHER_API_KEY environment variable not set.");
-            std::process::exit(1);
-        }
-    };
+    
+    // Hardcoded API Key (Not Recommended for Production)
+    let api_key = "80f30eec264feb3ad85b837f565ebee6".to_string();
 
     match get_weather(&args.city, &api_key) {
         Ok(weather) => {

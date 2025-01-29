@@ -2,6 +2,7 @@ use clap::Parser;
 use reqwest::blocking::Client;
 use serde::Deserialize;
 use std::env;
+use dotenv::dotenv;  // Import dotenv
 
 #[derive(Parser)]
 #[command(author, version, about, long_about = None)]
@@ -29,7 +30,10 @@ struct MainInfo {
 }
 
 fn main() {
+    dotenv().ok(); // Load the environment variables from `.env` file
+
     let args = Cli::parse();
+
     let api_key = match env::var("OPENWEATHER_API_KEY") {
         Ok(val) => val,
         Err(_) => {
@@ -41,7 +45,7 @@ fn main() {
     match get_weather(&args.city, &api_key) {
         Ok(weather) => {
             println!(
-                "City: {}\nWeather: {}\nTemperature: {:.2}°C\nHumidity: {}%",
+                "City: {}\nWeather: {}\nTemperature: {}°C\nHumidity: {}%",
                 weather.name,
                 weather.weather.get(0).map_or("N/A", |w| &w.description),
                 kelvin_to_celsius(weather.main.temp),
@@ -58,7 +62,7 @@ fn main() {
 fn get_weather(city: &str, api_key: &str) -> Result<WeatherResponse, Box<dyn std::error::Error>> {
     let url = format!(
         "https://api.openweathermap.org/data/2.5/weather?q={}&appid={}",
-        city, api_key // Use the `api_key` parameter here
+        city, api_key
     );
 
     let client = Client::new();

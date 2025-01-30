@@ -30,7 +30,7 @@ struct MainInfo {
 fn main() {
     let args = Cli::parse();
     
-    // Hardcoded API Key (Not Recommended for Production)
+    
     let api_key = "80f30eec264feb3ad85b837f565ebee6".to_string();
 
     match get_weather(&args.city, &api_key) {

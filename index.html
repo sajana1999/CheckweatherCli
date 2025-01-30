@@ -1,1 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather CLI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900">
+    
+
+    <header class="bg-blue-600 text-white shadow-md fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold">WeatherCLI</a>
+            
+            
+            
+
+  
+            <button id="menu-btn" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+	<!-- Hero Section -->
+<section class="bg-blue-600 text-white min-h-screen flex items-center justify-center text-center px-6 pt-24">
+    <div class="max-w-3xl">
+        
+        <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+            Get Instant Weather Reports from Your Terminal 🌦️
+        </h1>
+       
+        <p class="mt-4 text-lg md:text-xl">
+            A lightweight, fast, and cross-platform CLI tool for real-time weather updates.
+        </p>
+       
+        <div class="mt-6 space-x-4">
+            
+            <a href="https://sajana1999.github.io/CheckweatherCli/" class="border border-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition">
+                ⭐ Star on GitHub
+            </a>
+        </div>
+        
+        <div class="mt-10 bg-gray-900 text-green-400 text-left p-4 rounded-lg shadow-lg max-w-xl mx-auto">
+            <code class="block"> City: Berlin</code>
+            <code class="block"> Weather: overcast Clouds</code>
+            <code class="block"> Temperature: 15°C</code>
+            <code class="block"> Humidity: 91%</code>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="bg-white text-gray-900 py-16">
+    <div class="max-w-7xl mx-auto text-center px-6">
+        <!-- Section Title -->
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-600">Why Use WeatherCLI?</h2>
+        <p class="mt-4 text-lg text-gray-600">A fast, lightweight, and cross-platform CLI tool for real-time weather updates at your fingertips.</p>
+
+       
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div class="bg-blue-100 p-6 rounded-lg shadow-lg hover:bg-blue-200 transition">
+                <h3 class="text-xl font-semibold text-blue-600">🚀 Fast & Lightweight</h3>
+                <p class="mt-4 text-gray-700">WeatherCLI provides quick, no-frills access to weather information directly from your terminal.</p>
+            </div>
+
+           
+            <div class="bg-blue-100 p-6 rounded-lg shadow-lg hover:bg-blue-200 transition">
+                <h3 class="text-xl font-semibold text-blue-600">🔍 Accurate Data</h3>
+                <p class="mt-4 text-gray-700">WeatherCLI fetches real-time weather updates, providing you with accurate data at any moment.</p>
+            </div>
+
+           
+            <div class="bg-blue-100 p-6 rounded-lg shadow-lg hover:bg-blue-200 transition">
+                <h3 class="text-xl font-semibold text-blue-600">🌎 Cross-Platform</h3>
+                <p class="mt-4 text-gray-700">Works on Linux and macOS, allowing you to access weather data no matter your OS.</p>
+            </div>
+
+            
+            <div class="bg-blue-100 p-6 rounded-lg shadow-lg hover:bg-blue-200 transition">
+                <h3 class="text-xl font-semibold text-blue-600">⚡ Easy Setup</h3>
+                <p class="mt-4 text-gray-700">Get started in seconds with a simple command to run and start using the tool right away.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Used Guide Section -->
+<section id="install" class="bg-blue-600 text-white py-16">
+    <div class="max-w-7xl mx-auto text-center px-6">
+        
+        <h2 class="text-3xl md:text-4xl font-bold">How to Use WeatherCLI</h2>
+        <p class="mt-4 text-lg text-blue-200">Quick and easy use to start getting weather updates right in your terminal.</p>
+
+        
+        <div class="mt-12 space-y-8">
+         
+            <div class="bg-blue-100 text-blue-600 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold">Step 1: Download WeatherCli</h3>
+                <p class="mt-4 text-gray-700">Make sure you have to Downloaded. You can download it from this web site "Ready to Get Started?" area.</p>
+                
+            </div>
+
+
+            <div class="bg-blue-100 text-blue-600 p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold">Step 2: Use WeatherCLI</h3>
+                <p class="mt-4 text-gray-700">After download, you can use WeatherCLI by typing a city name in your terminal:</p>
+                <div class="bg-gray-900 text-green-400 text-left p-4 rounded-lg mt-4">
+                    <code class="block">$ ./CheckweatherCli --city "Colombo"  </code>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Weather Report CLI Project Section -->
+<section id="weather-report" class="bg-white py-16">
+    <div class="max-w-7xl mx-auto text-center px-6">
+       
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-600">Weather Report CLI Tool</h2>
+        <p class="mt-4 text-lg text-gray-600">A quick and easy way to get weather updates for any city directly from your terminal.</p>
+
+       
+        <div class="mt-12 bg-blue-50 p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold text-blue-600">💡 The Problem</h3>
+            <p class="mt-4 text-gray-700">Many people struggle to get accurate and up-to-date weather information on the go. The Weather Report CLI tool makes it easier to check the weather without opening a browser.</p>
+        </div>
+
+        
+        <div class="mt-12 bg-blue-50 p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold text-blue-600">🔧 The Solution</h3>
+            <p class="mt-4 text-gray-700">This CLI-based weather report tool allows users to quickly get accurate weather information by entering the city name in the terminal.</p>
+        </div>
+
+        
+        <div class="mt-12 bg-blue-50 p-6 rounded-lg shadow-lg">
+            <h3 class="text-2xl font-semibold text-blue-600">🌍 Who Is This For?</h3>
+            <p class="mt-4 text-gray-700">Designed for anyone who prefers using the terminal and needs quick, no-fuss weather information on the go. Ideal for developers, tech enthusiasts, and anyone who uses the CLI regularly.</p>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="testimonials" class="bg-blue-600 text-white py-16">
+    <div class="max-w-7xl mx-auto text-center px-6">
+ 
+        <h2 class="text-3xl md:text-4xl font-bold">What Users Are Saying</h2>
+        <p class="mt-4 text-lg text-blue-200">Check out feedback from users who love using WeatherCLI!</p>
+
+      
+        <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+           
+            <div class="bg-blue-700 p-6 rounded-lg shadow-lg text-center">
+                <p class="text-lg italic">"WeatherCLI has completely streamlined my work. Now, I can check the weather in seconds, directly from the terminal!"</p>
+                <p class="mt-4 font-semibold text-blue-200">John Doe</p>
+                <p class="text-blue-300">Developer at TechCorp</p>
+            </div>
+
+            
+            <div class="bg-blue-700 p-6 rounded-lg shadow-lg text-center">
+                <p class="text-lg italic">"A must-have tool for anyone who loves working in the terminal. It's so fast and easy to use!"</p>
+                <p class="mt-4 font-semibold text-blue-200">Jane Smith</p>
+                <p class="text-blue-300">Software Engineer</p>
+            </div>
+
+            
+            <div class="bg-blue-700 p-6 rounded-lg shadow-lg text-center">
+                <p class="text-lg italic">"Simple, lightweight, and powerful. I can always trust WeatherCLI for quick, accurate weather updates!"</p>
+                <p class="mt-4 font-semibold text-blue-200">Alex Brown</p>
+                <p class="text-blue-300">Freelancer</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Download area -->
+<section id="cta" class="bg-blue-600 text-white py-16">
+    <div class="max-w-7xl mx-auto text-center px-6">
+     
+        <h2 class="text-3xl md:text-4xl font-bold">Ready to Get Started?</h2>
+        <p class="mt-4 text-lg text-blue-200">Download WeatherCLI and start checking real-time weather updates directly in your terminal!</p>
+
+        
+        <div class="mt-8 flex justify-center space-x-4">
+            <!-- Download for Mac -->
+            <a href="https://github.com/sajana1999/CheckweatherCli/releases/download/v1.0.2/CheckweatherCli-macos.tar.gz" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-200 transition">
+                🍏 Download for Mac
+            </a>
+
+            
+            <a href="https://github.com/sajana1999/CheckweatherCli/releases/download/v1.0.2/CheckweatherCli-linux.tar.gz" class="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-200 transition">
+                🐧 Download for Linux
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+<footer class="bg-blue-900 text-white py-8">
+    <div class="max-w-7xl mx-auto text-center px-6">
+        
+        <p class="text-lg">© 2025 WeatherCLI. All Rights Reserved.</p>
+        <div class="mt-4">
+            <a href="https://sajana1999.github.io/CheckweatherCli/" class="text-blue-400 hover:text-white transition mr-6">GitHub</a>
+            
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
 
